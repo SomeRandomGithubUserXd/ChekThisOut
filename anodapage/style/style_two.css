@@ -1,0 +1,475 @@
+
+
+
+
+
+
+/* Шрифты  */
+@font-face {
+    font-family: Nexa_Light; /* Имя шрифта */
+    src: url(fonts/Nexa_Light.ttf); /* Путь к файлу со шрифтом */
+}
+/* /Шрифты  */
+
+/* Обнуление стилей */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    height: 120%;
+    width: 100%;
+
+}
+
+
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+article > * + * {
+    margin-top: 1em;
+}
+
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+/* /Обнуление стилей */
+
+/* Header */
+
+
+.main-header {
+    background: #FFF;
+
+
+
+
+}
+
+
+
+.main-nav a {
+    font-size: 0.75em;
+
+
+
+
+    text-decoration: none;
+}
+
+.main-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    width: 100%;
+
+    padding: 20px;
+}
+.main-header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav-list-a{
+    color: black;
+    opacity: 0.5;
+    font-family: 'Nexa_Light',serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.main-nav-list-a:hover{
+    opacity: 1;
+}
+
+.main-nav ul {
+    margin: 1em 0 .5em;
+    text-align: center;
+}
+.main-nav li {
+    display: inline;
+}
+.main-nav a {
+    display: inline-block;
+    padding: .5em 1.5em;
+}
+.main-div-list-phone-text{
+    font-family: 'Nexa_Light';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 26px;
+    /* identical to box height */
+    text-align: right;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: #000000;
+
+    opacity: 0.5;
+}
+.main-div-list-phone{
+    font-family:'Nexa_Light' ;
+
+    font-family: 'Nexa_Light';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 27px;
+    line-height: 41px;
+    /* identical to box height */
+    text-align: right;
+
+    color: #000000;
+}
+
+
+
+
+
+/* /Header */
+
+/* Projects-menu */
+.projects-menu{
+    display: table;
+    width: 80%;
+
+    margin-left:5%;
+
+}
+
+.projects-link-cur{
+    text-decoration: none;
+    font-family: 'Nexa_Light', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+
+    /* identical to box height */
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: #000000;
+    transition: 0.5s;
+
+
+
+}
+
+
+.projects-link{
+    text-decoration: none;
+    margin-left: 30px;
+    font-family: 'Nexa_Light', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+
+    /* identical to box height */
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    color: #000000;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+
+.projects-link:hover{
+    opacity: 1;
+}
+.wrap-menu{
+
+}
+.projects-menu{
+    display: flex;
+    flex-direction: row;
+
+}
+/* /Projects-menu */
+
+/* Projects */
+.projects{
+    display: flex;
+    flex-direction: row;
+
+
+    flex-wrap: wrap;
+
+}
+
+.project-img:hover ~ .descr-img-top{
+  opacity: 1;
+}
+
+.project-img:hover ~ .descr-img-center{
+    opacity: 1;
+}
+
+
+.project-img:hover ~ .descr-img-bottom{
+    opacity: 1;
+}
+
+
+.descr-img-bottom{
+    position: absolute;
+    top:80%;
+
+    left: 0;
+    opacity: 0;
+    color: white;
+    font-family: 'Nexa_Light', serif;
+    margin-left: 5%;
+    transition: 0.3s;
+}
+
+.descr-img-center{
+    position: absolute;
+    top:50%;
+
+    left: 0;
+    opacity: 0;
+    color: white;
+    font-family: 'Nexa_Light', serif;
+    margin-left: 5%;
+    transition: 0.3s;
+}
+
+.descr-img-top{
+    position: absolute;
+    top:20%;
+
+    left: 0;
+    opacity: 0;
+    color: white;
+    font-family: 'Nexa_Light', serif;
+    margin-left: 5%;
+    transition: 0.3s;
+}
+
+.project-img{
+    width: 450px;
+    height: 250px;
+}
+
+
+.image{
+    position: relative;
+    margin-top: 1%;
+    margin-left: 1%;
+    transition: 0.3s;
+}
+.project-img{
+    position: relative;
+
+
+
+}
+
+
+
+
+.project-img:hover{
+
+    -webkit-filter: brightness(40%);
+    filter: brightness(40%);
+}
+
+/* /Projects */
+
+
+/* Media-Queries */
+
+@media (max-width:768px) {
+    .projects-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .projects-link{
+        margin-left: 0;
+    }
+    .main-div-list-phone-text{
+        text-align: center;
+        margin-top: 5%;
+        font-size: 100%;
+    }
+    .main-div-list-phone{
+        text-align: center;
+
+        font-size: 100%;
+    }
+
+
+    .main-header.container {
+        justify-content: space-between;
+    }
+
+
+
+
+}
+@media (min-width:768px) {
+
+    .container .main-nav{
+        display: block;
+    }
+
+    .container .spoiler-link {
+        display: none;
+    }
+
+}
+
+
+
+
+/* /Media-Queries */
+
+
+
+
+
+
+/* Mobile Menu */
+.menu-triger{
+    display: none;
+}
+
+@media (max-width:768px) {
+    .menu-triger {
+        display: block;
+        width: 25px;
+        height: 27px;
+        background: url(img/bars.png);
+
+    }
+
+
+    .menu-popup {
+        display: none;
+        background: white;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 0;
+        padding: 30px;
+        z-index: 9999;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+    .menu-popup ul {
+        margin: 0;
+        padding: 0;
+    }
+    .menu-popup li {
+        list-style: none;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .menu-popup li a {
+        font-size: 18px;
+        font-family: "Arial";
+        color: black;
+        line-height: 1.4;
+        text-decoration: none;
+    }
+    .body_pointer * {
+        cursor: pointer;
+    }
+}
+
+/* /Mobile Menu */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
